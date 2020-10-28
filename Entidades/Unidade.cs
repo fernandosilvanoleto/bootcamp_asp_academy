@@ -17,11 +17,11 @@ namespace bootcamp_asp_academy.Entidades
             Alunos = new List<Aluno>();
             Professores = new List<Professor>();
         }
-        public int Id { get; private set; }
-        public string Nome { get; private set; }
-        public string Endereco { get; private set; }
-        public List<Aluno> Alunos { get; private set; }
-        public List<Professor> Professores { get; private set; }
+        public int Id { get;  set; }
+        public string Nome { get; set; }
+        public string Endereco { get; set; }
+        public List<Aluno> Alunos { get;  set; }
+        public List<Professor> Professores { get;  set; }
 
 
     }

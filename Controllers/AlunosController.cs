@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using bootcamp_asp_academy.Entidades;
+using bootcamp_asp_academy.Persistence;
 using Microsoft.AspNetCore.Mvc;
 
 namespace bootcamp_asp_academy.Controllers
@@ -11,15 +12,18 @@ namespace bootcamp_asp_academy.Controllers
     [Route("api/alunos")]
     public class AlunosController : ControllerBase
     {
+        private readonly BancoContext _bancoContext;
+        //ctor -- PARA CRIAR CONSTRUTOR
+        public AlunosController(BancoContext bancoContext)
+        {
+            _bancoContext = bancoContext;
+        }
+
         // SISTEMA SER RECONHECIDO COMO API
         [HttpGet]
         public IActionResult Index()
         {
-            var alunos = new List<Aluno> {
-                new Aluno("fernando", "rua zero", DateTime.Now),
-                new Aluno("leide", "rua 1", DateTime.Now),
-                new Aluno("rogerio", "rua 9", DateTime.Now)
-            };
+            var alunos = _bancoContext.Alunos.ToList();
 
             return Ok(alunos);
         }
@@ -27,13 +31,25 @@ namespace bootcamp_asp_academy.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            return Ok();
+            var aluno = _bancoContext.Alunos.SingleOrDefault(a => a.Id == id);
+            if (aluno == null)
+            {
+                return NotFound();
+            }
+            return Ok(aluno);
         }
 
         [HttpPost]
-        public IActionResult Post()
+        public IActionResult Post([FromBody] Aluno aluno)
         {
-            return Ok();
+            var professor = new Professor("professor 1", "endereco 1", aluno.IdUnidade);
+            _bancoContext.Professores.Add(professor);
+            _bancoContext.SaveChanges();
+
+            _bancoContext.Alunos.Add(aluno);
+            _bancoContext.SaveChanges();
+
+            return NoContent();
         }
 
         [HttpPut("{id}")]

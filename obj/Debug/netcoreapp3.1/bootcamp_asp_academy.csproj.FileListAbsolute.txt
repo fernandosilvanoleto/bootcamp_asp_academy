@@ -63,3 +63,13 @@ G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\runtimes\
 G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
 G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\FluentValidation.WebApi.dll
+G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\EntityFramework.dll
+G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\CodeFirstStoreFunctions.dll
+G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\Programação_Udemy\C#\bootcamp_asp_academy\obj\Debug\netcoreapp3.1\bootcamp_asp_academy.csproj.CoreCompileInputs.cache
+G:\Programação_Udemy\C#\bootcamp_asp_academy\obj\Debug\netcoreapp3.1\bootcamp_asp_academy.MvcApplicationPartsAssemblyInfo.cs
+G:\Programação_Udemy\C#\bootcamp_asp_academy\obj\Debug\netcoreapp3.1\bootcamp_asp_academy.MvcApplicationPartsAssemblyInfo.cache

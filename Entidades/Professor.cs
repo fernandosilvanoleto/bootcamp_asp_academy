@@ -9,12 +9,13 @@ namespace bootcamp_asp_academy.Entidades
     public class Professor
     {
         protected Professor() { }
-        public Professor(string nome, string endereco)
+        public Professor(string nome, string endereco, int idunidade)
         {
             Nome = nome;
             Endereco = endereco;
             Status = StatusProfessorEnum.Ativo;
             Alunos = new List<Aluno>();
+            IdUnidade = idunidade;
         }
 
         public int Id { get; private set; }
