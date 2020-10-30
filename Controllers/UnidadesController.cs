@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using bootcamp_asp_academy.Entidades;
 using bootcamp_asp_academy.Persistence;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace bootcamp_asp_academy.Controllers
 {
@@ -47,9 +48,21 @@ namespace bootcamp_asp_academy.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id)
+        public async Task<IActionResult> Put(int id, [FromBody] Unidade unidade)
         {
-            return Ok();
+            // verificar se existe UNIDADE
+            if (!(await _bancoContext.Unidades.AnyAsync(a => a.Id == id)))
+            {
+                // UNIDADE NÃO ENCONTRADA
+                return NotFound();
+            }
+
+            // FAZER UPDATE DE UNIDADE EXISTENTE
+            //_bancoContext.Unidades.Update(unidade);
+            _bancoContext.Entry(unidade).State = EntityState.Modified;
+            await _bancoContext.SaveChangesAsync();
+
+            return NoContent();
         }
 
         [HttpDelete("{id}")]

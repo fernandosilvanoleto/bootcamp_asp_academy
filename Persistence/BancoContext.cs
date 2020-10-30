@@ -1,4 +1,5 @@
 ﻿using bootcamp_asp_academy.Entidades;
+using bootcamp_asp_academy.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -26,35 +27,12 @@ namespace bootcamp_asp_academy.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Aluno>()
-                .HasKey(a => a.Id);
+            // CARREGAR AS CONFIGURAÇÕES POR ENTIDADE EM "persistence/configurations"
+            modelBuilder.ApplyConfiguration(new UnidadeConfiguration());
+            modelBuilder.ApplyConfiguration(new ProfessorConfiguration());
+            modelBuilder.ApplyConfiguration(new AlunoConfiguration());
 
-            modelBuilder.Entity<Professor>()
-                .HasKey(a => a.Id);
 
-            // REFERENCIAR FKS EM ENTITY
-            modelBuilder.Entity<Professor>()
-                .HasMany(p => p.Alunos)
-                .WithOne(a => a.Professor)
-                .HasForeignKey(a => a.IdProfessor)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<Unidade>()
-                .HasKey(u => u.Id);
-
-            // REFERENCIAR FKS EM ENTITY
-            modelBuilder.Entity<Unidade>()
-                .HasMany(u => u.Alunos)
-                .WithOne(a => a.Unidade)
-                .HasForeignKey(a => a.IdUnidade)
-                .OnDelete(DeleteBehavior.Restrict); // OU CASCADE
-
-            // REFERENCIAR FKS EM ENTITY
-            modelBuilder.Entity<Unidade>()
-                .HasMany(u => u.Professores)
-                .WithOne(p => p.Unidade)
-                .HasForeignKey(p => p.IdUnidade)
-                .OnDelete(DeleteBehavior.Restrict); // OU CASCADE
         }
 
     }

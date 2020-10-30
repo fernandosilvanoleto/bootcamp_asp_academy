@@ -2,7 +2,6 @@ G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\appsettin
 G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\appsettings.json
 G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\bootcamp_asp_academy.exe
-G:\Programação_Udemy\C#\bootcamp_asp_academy\obj\Debug\netcoreapp3.1\bootcamp_asp_academy.csprojAssemblyReference.cache
 G:\Programação_Udemy\C#\bootcamp_asp_academy\obj\Debug\netcoreapp3.1\bootcamp_asp_academy.AssemblyInfoInputs.cache
 G:\Programação_Udemy\C#\bootcamp_asp_academy\obj\Debug\netcoreapp3.1\bootcamp_asp_academy.AssemblyInfo.cs
 G:\Programação_Udemy\C#\bootcamp_asp_academy\obj\Debug\netcoreapp3.1\bootcamp_asp_academy.RazorTargetAssemblyInfo.cache
@@ -73,3 +72,4 @@ G:\Programação_Udemy\C#\bootcamp_asp_academy\bin\Debug\netcoreapp3.1\runtimes\
 G:\Programação_Udemy\C#\bootcamp_asp_academy\obj\Debug\netcoreapp3.1\bootcamp_asp_academy.csproj.CoreCompileInputs.cache
 G:\Programação_Udemy\C#\bootcamp_asp_academy\obj\Debug\netcoreapp3.1\bootcamp_asp_academy.MvcApplicationPartsAssemblyInfo.cs
 G:\Programação_Udemy\C#\bootcamp_asp_academy\obj\Debug\netcoreapp3.1\bootcamp_asp_academy.MvcApplicationPartsAssemblyInfo.cache
+G:\Programação_Udemy\C#\bootcamp_asp_academy\obj\Debug\netcoreapp3.1\bootcamp_asp_academy.csprojAssemblyReference.cache
